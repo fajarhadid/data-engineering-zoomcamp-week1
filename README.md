@@ -92,7 +92,7 @@ WHERE lpep_dropoff_datetime >= '2019-10-01'
   AND lpep_dropoff_datetime < '2019-11-01';
 ```
 Result:
-![Query_Result](green_taxi_data_ingestion/data/images/Q3.png)
+![Query_Result](green_taxi_data_ingestion/data/images/Q3.PNG)
 
 ### Question 4: Longest trip for each day
 This query retrieve pick up day with the longest trip distance.
@@ -103,7 +103,7 @@ WHERE trip_distance =
 	(SELECT MAX(trip_distance) FROM green_taxi_trips);
 ```
 Result:
-![Query_Result](green_taxi_data_ingestion/data/images/Q4.png)
+![Query_Result](green_taxi_data_ingestion/data/images/Q4.PNG)
 
 ### Question 5: Three biggest pickup zones
 This query identify the top pickup locations where the total total_amount exceeds 13,000 across all trips for the date 2019-10-18.
@@ -117,7 +117,7 @@ GROUP BY 1
 HAVING SUM(total_amount) > 13000;
 ```
 Result:
-![Query_Result](green_taxi_data_ingestion/data/images/Q5.png)
+![Query_Result](green_taxi_data_ingestion/data/images/Q5.PNG)
 
 ### Question 6: Largest tip
 This query find the drop-off zone with the largest tip for passengers picked up in October 2019 from the zone named "East Harlem North".
@@ -132,4 +132,4 @@ ORDER BY tip_amount DESC
 LIMIT 1;
 ```
 Result:
-![Query_Result](green_taxi_data_ingestion/data/images/Q6.png)
+![Query_Result](green_taxi_data_ingestion/data/images/Q6.PNG)
